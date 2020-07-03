@@ -53,6 +53,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:title, :body, :photo)
+      params.require(:article).permit(:title, :body, photos: [])
     end
 end
